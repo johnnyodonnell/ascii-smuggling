@@ -7,11 +7,6 @@ def remove_invisible_tags_naive(string):
             new_string += char
     return new_string
 
-
-def is_invisible_tag(char):
-    c_ord = ord(char)
-    return ((c_ord >= 0xE0000) and (c_ord <= 0xE007F))
-
 def remove_invisible_tags(string):
     new_string = ""
     in_flag = False
@@ -30,7 +25,7 @@ def remove_invisible_tags(string):
         elif c_ord == 0x1F3F4:
             in_flag = True
             flag_chars = [char]
-        elif not is_invisible_tag(char):
+        elif ((c_ord < 0xE0000) or (c_ord > 0xE007F)):
             new_string += char
     return new_string
 
