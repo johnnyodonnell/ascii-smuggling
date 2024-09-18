@@ -1,0 +1,5 @@
+
+* Resources
+    - https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/
+    - https://embracethered.com/blog/ascii-smuggler.html
+
